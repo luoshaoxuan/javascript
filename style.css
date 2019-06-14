@@ -1,0 +1,97 @@
+/*
+    CSS Flexbox 排版工具
+    核心設定：display: flex
+    上下對齊：align-items: center
+    左右對齊：justify-content: center; 
+    允許往下排列：flex-wrap: wrap;
+*/
+body
+    {
+    margin: 0px;
+    }
+.nav
+    {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #888888;
+    padding: 15px 40px; /*上下間距、左右間距*/
+    }
+    .nav>.menu
+        {
+        position: fixed;
+        top:0px;
+        right:0px;
+        width:200px;
+        height:70%;
+        background-color: #eeeeee;
+        display: none;
+        }
+    .nav>.icon
+        {
+        width: 50%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 24px;
+        }
+    .nav>.login
+        {
+        width: 50%;
+        text-align: right;
+        }
+    .nav>.trigger
+        {
+        width: 50%;
+        text-align: right;
+        display: none;
+        }
+        @media (max-width:600px){
+            .nav>.login{
+                display: none;
+            }
+            .nav>.trigger{
+                display: block;
+            }
+        }
+.header
+    {
+    text-align:center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 2px 10px #888888; /*x位移 y位移 擴散程度*/
+    }
+    .header>.title
+        {
+        font-weight:bold;
+        font-size:36px;
+        }
+    .header>.search
+        {
+        width: 650px;
+        border-width: 0px;
+        background-color: #eeeeee;
+        padding: 5px;
+        margin-top: 20px;
+        }
+        @media (max-width:800px){
+            .header>.search{width: 90%;}
+        }
+.main
+    {
+    display: flex; /*允許同標籤左右分開，內建不允許換行*/
+    flex-wrap: wrap; /*打掉內建換行限制*/
+    justify-content: center; /*置中對齊*/
+    padding-top: 30px;
+    }
+    .main>.box
+        {
+        background-color: rgb(114, 143, 202);
+        width: 500px;
+        height: 400px;
+        margin: 20px;
+        }
+        @media (max-width:1200px){
+            .main>.box{width: 40%;}
+        }
+        @media (max-width:600px){
+            .main>.box{width: 90%;}
+        }

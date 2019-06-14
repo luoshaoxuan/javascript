@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Developers</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="icon">Google Developers</div>
+        <div class="login">登入</div>
+        <div class="trigger"> 
+            <img onclick="show();" width="40" src="menu.png" ></div>
+            <div id="menu" class="menu">
+                <div class="item">登入</div>
+                <div class="item">登出</div>
+            </div>
+    </div>
+    <div class="header">
+        <div id="title" class="title" onclick="test()">Build Anything with Google</div>
+        <input class="search" type="text">
+    </div>
+    <div class="main">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <script>
+        //javascript 程式
+        /*
+        true/false
+        null:空值
+        undefined:未定義
+        */
+        /* 終端機印出所打資料
+        console.log("Hello");
+        console.log(6);
+        console.log(true);
+        */
+        /* 變數設定
+        let x=3; 只有第一次有加 let
+        x=ture;
+        */
+        /* 運算子 +,-,*,/,>,<,>=,<=,==
+        let y=6>3;
+        console.log(y); 輸出true
+        */        
+        // 函式
+        function test(){
+            //利用內建功能，抓到想要操作的標籤
+            //document.getElementById(標籤id)
+            let divTag=document.getElementById("title");
+            console.log(divTag);
+            //修改標籤屬性
+            //抓到的標籤，屬性名稱=新的資料
+            // divTag.className="abc"; 修改id 的class狀態
+            // divTag.innerHTML="hellow google"; 修改id 的顯示文字
+            // divTag.style.color="red"; 修改文字的顏色
+            // divTag.style.display="none"; 將東西隱藏
+        }
+        function show(){
+            let menu=document.getElementById("menu");
+            menu.style.display="block";
+        }
+               
+    </script>
+</body>
+</html>
